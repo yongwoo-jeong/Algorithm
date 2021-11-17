@@ -129,15 +129,12 @@ class PriorityQueue:
     def isEmpty(self):
         return self.size() == 0
 
-#Curr  1 4 7  9 
-# node(x) = 3 curr =1 curr 4 > 1 4 3
-
     def enqueue(self, x):
         newNode = Node(x)
         curr = self.queue.head
-        while curr.data < newNode.data and curr.next.data != None:
+        while curr.next.data != None and curr.next.data >= newNode.data:
             curr = curr.next
-        self.queue.insertAt(curr.newNode)
+        self.queue.insertAfter(curr.newNode)
 
     def dequeue(self):
         return self.queue.popAt(self.queue.getLength())
