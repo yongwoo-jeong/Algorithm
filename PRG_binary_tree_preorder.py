@@ -24,6 +24,16 @@ class Node:
         if self.right:
             traversal += self.right.preorder()
         return traversal
+'''  아래 코드와 동일. if와 elif를 같이 사용
+     def inorder(self):
+        traversal = []
+        if self.left:
+            traversal += self.left.inorder()
+        traversal.append(self.data)
+        if self.right:
+            traversal += self.right.inorder()
+        return traversal'''
+        
 
 
 class BinaryTree:
