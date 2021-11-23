@@ -19,12 +19,10 @@ class Node:
     def preorder(self):
         traversal = []
         traversal.append(self.data)
-        
         if self.left:
             traversal += self.left.preorder()
-        elif self.right:
+        if self.right:
             traversal += self.right.preorder()
-        
         return traversal
 
 
@@ -45,7 +43,7 @@ class BinaryTree:
         if self.root:
             return self.root.preorder()
         else:
-            return None
+            return []
 
 
 def solution(x):
