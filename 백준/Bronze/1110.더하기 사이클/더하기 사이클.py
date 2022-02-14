@@ -7,7 +7,7 @@ while True:
     b = numb % 10
     c = (a+b) % 10
     numb = (b*10) + c
-    count = count +1
+    count +=1
     if numb == init:
         break
 print(count)    
